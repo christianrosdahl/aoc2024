@@ -1,20 +1,23 @@
 # Advent of Code 2024 - day D
-
-# %% Imports
 from common import get_input
 
 
-# %% Part 1
-def main():
+# Part 1
+def main1():
     input_data = get_input("ex_inputDD.txt")
 
+    ans = None
+    print(f"The answer is: {ans}")
 
-main()
 
-
-# %% Part 2
+# Part 2
 def main2():
     input_data = get_input("ex_inputDD.txt")
 
+    ans = None
+    print(f"The answer is: {ans}")
 
-main2()
+
+if __name__ == "__main__":
+    main1()
+    main2()
