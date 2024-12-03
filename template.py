@@ -7,7 +7,7 @@ def main1():
     input_data = get_input("ex_inputDD.txt")
 
     ans = None
-    print(f"The answer is: {ans}")
+    print(f"Answer 1 is: {ans}")
 
 
 # Part 2
@@ -15,7 +15,7 @@ def main2():
     input_data = get_input("ex_inputDD.txt")
 
     ans = None
-    print(f"The answer is: {ans}")
+    print(f"Answer 2 is: {ans}")
 
 
 if __name__ == "__main__":
