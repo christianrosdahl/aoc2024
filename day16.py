@@ -1,5 +1,5 @@
 # Advent of Code 2024 - day 16
-from common import get_input
+from common import get_input, dijkstra
 
 
 # Part 1
@@ -50,33 +50,6 @@ def get_edges(node, input_data):
         if not input_data[new_row][new_col] == "#":
             edges[(new_row, new_col, new_direction)] = cost
     return edges
-
-
-def dijkstra(nodes, edges, start_node):
-    dist = {}
-    prev = {}
-    unvisited_nodes = []
-    for node in nodes:
-        dist[node] = float("inf")
-        prev[node] = []
-        unvisited_nodes.append(node)
-    dist[start_node] = 0
-
-    while len(unvisited_nodes) > 0:
-        min_dist = float("inf")
-        for unvisited_node in unvisited_nodes:
-            if dist[unvisited_node] <= min_dist:
-                min_dist = dist[unvisited_node]
-                selected_node = unvisited_node
-        unvisited_nodes.remove(selected_node)
-
-        for neighbor, edge_cost in edges[selected_node].items():
-            alt_dist = dist[selected_node] + edge_cost
-            if alt_dist <= dist[neighbor]:
-                dist[neighbor] = alt_dist
-                prev[neighbor].append(selected_node)
-
-    return dist, prev
 
 
 # Part 2
